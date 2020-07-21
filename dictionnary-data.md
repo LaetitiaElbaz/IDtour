@@ -7,7 +7,8 @@
 |id|INT|PRIMARY KEY, NOT NULL, UNSIGNED, AUTO_INCREMENT|POI's identifier|
 |poi_name|TEXT|NOT NULL|POI's name|
 |description|TEXT|NOT NULL|POI's description|
-|address|VARCHAR(255)|NOT NULL|POI's adress|
+|streetNumber|VARCHAR(255)|NOT NULL|POI's street number|
+|streetName|VARCHAR(255)|NOT NULL|POI's street name|
 |poi_gps_lat|DECIMAL(10,6)|NULL, UNSIGNED|POI's latitude|
 |poi_gps_lng|DECIMAL(10,6)|NULL, UNSIGNED|POI's longitude|
 |poi_slug|VARCHAR(255)|NULL|POI's slug|
@@ -145,7 +146,7 @@
 |username|VARCHAR(180)|NOT NULL|User's surname|
 |email|VARCHAR(180)|NOT NULL|User's email|
 |password|VARCHAR(180)|NOT NULL|User's password|
-|role|ARRAY|NOT NULL|User's role|
+|username_role|ARRAY|NOT NULL|User's role|
 |created_at|TIMESTAMP|NOT NULL, DEFAULT CURRENT_TIMESTAMP|Creation date of the user|
 |updated_at|TIMESTAMP|NULL|Last update of the user|
 
