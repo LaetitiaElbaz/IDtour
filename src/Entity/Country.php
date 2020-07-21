@@ -28,6 +28,11 @@ class Country
     private $countryName;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $countrySlug;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
@@ -36,7 +41,6 @@ class Country
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
-
 
     public function getId(): ?int
     {
@@ -63,6 +67,18 @@ class Country
     public function setCountryName(string $countryName): self
     {
         $this->countryName = $countryName;
+
+        return $this;
+    }
+    
+    public function getCountrySlug(): ?string
+    {
+        return $this->countrySlug;
+    }
+
+    public function setCountrySlug(?string $countrySlug): self
+    {
+        $this->countrySlug = $countrySlug;
 
         return $this;
     }
