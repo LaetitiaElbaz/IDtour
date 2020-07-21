@@ -145,7 +145,7 @@
 |username|VARCHAR(180)|NOT NULL|User's surname|
 |email|VARCHAR(180)|NOT NULL|User's email|
 |password|VARCHAR(180)|NOT NULL|User's password|
-|role|ARRAY|NOT NULL|User's role|
+|username_role|ARRAY|NOT NULL|User's role|
 |created_at|TIMESTAMP|NOT NULL, DEFAULT CURRENT_TIMESTAMP|Creation date of the user|
 |updated_at|TIMESTAMP|NULL|Last update of the user|
 
