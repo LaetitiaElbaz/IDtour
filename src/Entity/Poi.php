@@ -30,7 +30,7 @@ class Poi
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=4)
+     * @ORM\Column(type="string", length=4, nullable=true)
      */
     private $streetNumber;
 
@@ -107,6 +107,8 @@ class Poi
         $this->offers = new ArrayCollection();
         $this->comments = new ArrayCollection();
         $this->contacts = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -198,7 +200,7 @@ class Poi
         return $this;
     }
 
-    public function getCreatedAt(): ?string
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }

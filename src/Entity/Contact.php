@@ -62,6 +62,8 @@ class Contact
     public function __construct()
     {
         $this->roles = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
