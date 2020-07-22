@@ -53,6 +53,8 @@ class Offer
     {
         $this->periods = new ArrayCollection();
         $this->prices = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int

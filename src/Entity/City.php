@@ -67,6 +67,8 @@ class City
     public function __construct()
     {
         $this->pois = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int

@@ -68,6 +68,8 @@ class Period
     {
         $this->offers = new ArrayCollection();
         $this->days = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int

@@ -42,6 +42,8 @@ class Days
     public function __construct()
     {
         $this->periods = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
