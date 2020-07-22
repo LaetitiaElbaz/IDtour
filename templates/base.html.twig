@@ -1,12 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}IDtour!{% endblock %}</title>
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- Fork awesome icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+        <!-- Personnal CSS -->
+        <link rel="stylesheet" type="text/css" href='{{ asset('assets/css/main.css')}}'>
+
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light" role="navigation">
+                <!-- Logo & Text-->
+                <div data-logobg="skin6" class="navbar-header">
+                    <div id="header-logo" class="navbar-brand">
+                        <b class="logo-icon">
+                            <img src="{{ asset('/images/logo-icon.png') }}" alt="">
+                        </b>
+
+                        <span class="logo-text">
+                            <img src="{{ asset('/images/logo-text.png') }}" alt="">
+                        </span>
+                    </div>
+                </div>
+                <!-- Right dropdown menu -->
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1"></ul>
+                    	<ul class="navbar-nav float-right">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Connexion
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">S'inscrire</a>
+                                <a class="dropdown-item" href="#">Se connecter</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Se déconnecter</a>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        </div>
+
+       <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+            <!-- Grid left column : About us -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content left column-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <!-- Logo -->
+                            <a class="" href="#"><img src="{{ asset('/images/logo-icon.png') }}" alt=""></a>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-uppercase">A propos</h5>
+                        </div>
+                    </div>
+                <p>Pourquoi ce site? Parce que le web est devenu une jungle : on y trouve tout mais par toujours au même endroit! Nous, on a voulu faciliter la vie de ceux qui préparent leurs vacances et séjours et qui en ont marre de d'aller sur 20 sites différents. Ce site est collaboratif, il vise à ce que chacun d'entre nous fasse partager ses bons plans touristiques, qu'ils soient atypiques, familiaux, sportifs...et que sais-je encore?!</p>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid center column : Quicks Links -->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links-->
+                <h5 class="text-uppercase">Liens</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Ajouter un bon plan</a>
+                    </li>
+                    <li>
+                        <a href="#!">Plan du site</a>
+                    </li>
+                    <li>
+                        <a href="#!">Mentions légales</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grid right column  : Contact us-->
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase text-center">Contactez-nous</h5>
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline text-center">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1" href="#!">
+                            <i class="fa fa-envelope" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1" href="#!">
+                            <i class="fa fa-facebook-f" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-tw mx-1" href="#!">
+                            <i class="fa fa-twitter" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-gplus mx-1" href="#!">
+                            <i class="fa fa-instagram" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1" href="#!">
+                            <i class="fa fa-linkedin" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright :
+                <a href="https://idtour.fr/"> IDtour.fr</a>
+            </div>
+        </footer>
+
+        {% block javascripts %}
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Personnal JavaScript -->
+        <script src='{{ asset('assets/js/main.js')}}'></script>
+
+
+        {% endblock %}
     </body>
 </html>
