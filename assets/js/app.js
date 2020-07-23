@@ -24,8 +24,9 @@ import 'bootstrap'; //
 /**
  * PERSONNAL JS
  */
-import getNiceMessage from './get_nice_message';
-console.log(getNiceMessage(5));
+import getNiceMessage from './components/get_nice_message';
+// console.log(getNiceMessage(5));
+
 $('.dropdown-toggle').dropdown();
 $('.custom-file-input').on('change', function(event) {
     var inputFile = event.currentTarget;

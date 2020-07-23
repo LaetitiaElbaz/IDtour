@@ -14,7 +14,7 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DefaultType extends AbstractType
+class HomeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

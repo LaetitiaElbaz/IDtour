@@ -1,0 +1,13 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="input-group-mb-3">
+        <div id="default"> 
+            <div class="form-group">
+                <label class for="default_area">Area</label>
+                <select id="default_area" name="default[area]" class="form-control">
+            </div>
+        </div>
+    </div>
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
