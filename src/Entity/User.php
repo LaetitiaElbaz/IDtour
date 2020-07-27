@@ -225,4 +225,16 @@ class User implements UserInterface
 
         return $this;
     }  
+
+    /**
+     * Set the value of username
+     *
+     * @return  self
+     */ 
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
 }
