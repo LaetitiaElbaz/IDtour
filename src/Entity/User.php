@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -67,12 +68,9 @@ class User implements UserInterface
         return $this->id;
     }
     
-    /**
-     * @return string|null
-     */
     public function getEmail(): ?string
     {
-        return (string) $this->email;
+        return $this->email;
     }
 
     public function setEmail(string $email): self
@@ -87,21 +85,9 @@ class User implements UserInterface
      *
      * @see UserInterface
      */
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
-        return (string) $this->username;
-    }
-
-    /**
-     * Set the value of username
-     *
-     * @return  self
-     */ 
-    public function setUsername(string $username):self
-    {
-        $this->username = $username;
-
-        return $this;
+        return (string) $this->email;
     }
 
     /**
@@ -155,7 +141,7 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    /**
+     /**
      * Get the value of createdAt
      */ 
     public function getCreatedAt(): ?\DateTimeInterface
@@ -239,5 +225,4 @@ class User implements UserInterface
 
         return $this;
     }  
-
 }
