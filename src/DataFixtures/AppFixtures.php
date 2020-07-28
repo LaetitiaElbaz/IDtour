@@ -110,36 +110,36 @@ class AppFixtures extends Fixture
         $admin = new User();
         $admin->setUsername('admin');
         $admin->setEmail('admin@gmail.com');
-        $admin->setPassword('admin');
-        $admin->setUsernameRole(["ROLE_ADMIN"]);
+        $admin->setPassword('$argon2i$v=19$m=65536,t=4,p=1$TDI5TmFoY1gxTDVLd0lDZQ$xgBC59CwdgdlQ6+Xxzd4VEHPHtbK/ZnIakquEo1OBRk');
+        $admin->setRoles(["ROLE_ADMIN"]);
         $manager->persist($admin);
 
         $editor = new User();
         $editor->setUsername('editor');
         $editor->setEmail('editor@gmail.com');
-        $editor->setPassword('editor');
-        $editor->setUsernameRole(["ROLE_EDITOR"]);
+        $editor->setPassword('$argon2i$v=19$m=65536,t=4,p=1$a1QvRC9RWDUvVTlKN0V0RQ$oa/58G9+GzFlo+YvgaLnJVQ1GMbjE0Crle8OYwSBiQ0');
+        $editor->setRoles(["ROLE_EDITOR"]);
         $manager->persist($editor);
 
         $laetitia = new User();
         $laetitia->setUsername('laetitia');
         $laetitia->setEmail('laetitia@gmail.com');
-        $laetitia->setPassword('laetitia');
-        $laetitia->setUsernameRole(["ROLE_ADMIN", "ROLE_EDITOR"]);
+        $laetitia->setPassword('$argon2i$v=19$m=65536,t=4,p=1$MVZVd3l6a2tuQTBtMHl1cQ$mrf4Py89LOtffLM0tCvCOTAFW+Z3fxeQKerH36DnrxA');
+        $laetitia->setRoles(["ROLE_ADMIN", "ROLE_EDITOR"]);
         $manager->persist($laetitia);
 
         $user1 = new User();
         $user1->setUsername('user1');
         $user1->setEmail('user1@gmail.com');
-        $user1->setPassword('user1');
-        $user1->setUsernameRole(["ROLE_USER"]);
+        $user1->setPassword('$argon2i$v=19$m=65536,t=4,p=1$MENENzYwSVBoUFJ4YWxCMQ$5xqDg4vwxfuxm7VaEA6s1GbJP+kTxK1uEQBEACU4szM');
+        $user1->setRoles(["ROLE_USER"]);
         $manager->persist($user1);
 
         $user2 = new User();
         $user2->setUsername('user2');
         $user2->setEmail('user2@gmail.com');
-        $user2->setPassword('user2');
-        $user2->setUsernameRole(["ROLE_USER" , "ROLE_EDITOR"]);
+        $user2->setPassword('$argon2i$v=19$m=65536,t=4,p=1$ZWZWNm9mUzBYMU5WZkYyWA$AhYH67d4qIEHs4Q7XhJcNrzSlyFRRn0h0CwHIUO3LIs');
+        $user2->setRoles(["ROLE_USER" , "ROLE_EDITOR"]);
         $manager->persist($user2);
 
         // Create some tags
@@ -257,7 +257,7 @@ class AppFixtures extends Fixture
         $grasse->setCityName('Grasse');
         $grasse->setCityGpsLat('43.6478075');
         $grasse->setCityGpsLng('6.9316481');
-        // $grasse->AddPoi($poi1);
+        $grasse->AddPoi($poi1);
         $manager->persist($grasse);
 
         $gourdon = new City;
