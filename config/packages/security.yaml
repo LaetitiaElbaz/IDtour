@@ -18,6 +18,9 @@ security:
         main:
             anonymous: true
             provider: in_database
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
 
             form_login:
                 login_path: security_login
