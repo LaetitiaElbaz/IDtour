@@ -80,7 +80,7 @@ class User implements UserInterface
     
     public function getEmail(): ?string
     {
-        return $this->email;
+        return $this->username;
     }
 
     public function setEmail(string $email): self
