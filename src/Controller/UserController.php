@@ -15,8 +15,12 @@ class UserController extends AbstractController
      */
     public function profile()
     {
+        // get the current connected user 
+        $connectedUser = $this->getUser();
+        dump($connectedUser->getId());
+
         return $this->render('user/profile.html.twig', [
-            'controller_name' => 'UserController',
+            'user' => $connectedUser,
         ]);
     }
 }
