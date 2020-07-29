@@ -16,11 +16,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/", name="user_index", methods={"GET"})
+     * @Route("/", name="list", methods={"GET"})
      */
-    public function index(UserRepository $userRepository): Response
+    public function list(UserRepository $userRepository): Response
     {
-        return $this->render('user/index.html.twig', [
+        return $this->render('user/list.html.twig', [
             'users' => $userRepository->findAll(),
         ]);
     }
